@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Than Smoke | O nás</title>
+    <meta
+      name="description"
+      content="Spoznajte atmosféru More Than Smoke, prémiového cocktail baru v Trnave."
+    />
+    <link rel="icon" type="image/png" href="./fotky:videa/logo.png" />
+    <link rel="apple-touch-icon" href="./fotky:videa/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              night: "#050505",
+              pearl: "#f5f5f5",
+              mist: "#b9b9b9",
+            },
+            fontFamily: {
+              serif: ["Archivo Expanded", "sans-serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            letterSpacing: {
+              luxe: "0.28em",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 26rem),
+          #050505;
+        font-family: "Manrope", sans-serif;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      h1,
+      h2,
+      h3,
+      .nav-links a {
+        font-family: "Archivo Expanded", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .noise {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.18;
+        mix-blend-mode: soft-light;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.13) 0.45px, transparent 0.6px);
+        background-size: 5px 5px;
+      }
+
+      .nav-links {
+        position: fixed;
+        left: 50%;
+        top: 1.9rem;
+        z-index: 40;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        column-gap: 1.15rem;
+        width: min(88vw, 48rem);
+        transform: translateX(-50%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(12, 12, 12, 0.76), rgba(0, 0, 0, 0.52));
+        padding: 0.52rem 1.15rem 0.58rem;
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.34);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        overflow: visible !important;
+      }
+
+      .nav-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.78rem;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 350ms ease, transform 350ms ease;
+      }
+
+      .nav-links a:hover {
+        color: #ffffff;
+        transform: translateY(-1px);
+      }
+
+      .nav-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+      }
+
+      .nav-links-logo {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -2.45rem 0 0;
+        padding: 0 0.85rem;
+      }
+
+      .nav-center-logo {
+        display: block;
+        position: relative;
+        z-index: 2;
+        width: 9.8rem;
+        height: auto;
+        object-fit: contain;
+        opacity: 1;
+        transform: translateY(22px);
+        filter: drop-shadow(0 14px 24px rgba(255, 255, 255, 0.08));
+      }
+
+      .mobile-nav {
+        display: none;
+      }
+
+      .page-shell {
+        position: relative;
+        z-index: 1;
+        width: min(100% - 2.5rem, 80rem);
+        margin: 0 auto;
+        padding: 9.5rem 0 5rem;
+      }
+
+      .hero-copy {
+        max-width: 58rem;
+      }
+
+      .kicker {
+        margin: 0 0 1rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      .page-title {
+        max-width: 13ch;
+        font-size: clamp(3rem, 7vw, 6.8rem);
+        line-height: 0.9;
+        letter-spacing: -0.06em;
+        color: #ffffff;
+      }
+
+      .intro-text {
+        margin-top: 1.5rem;
+        max-width: 42rem;
+        font-size: clamp(1rem, 1.6vw, 1.25rem);
+        line-height: 1.85;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 4rem;
+      }
+
+      .about-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 28rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1.8rem;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+
+      .about-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.78)),
+          var(--card-image, radial-gradient(circle at center, rgba(255, 255, 255, 0.12), transparent 42%));
+        background-position: center;
+        background-size: cover;
+        filter: brightness(0.62) contrast(1.08);
+        transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1), filter 700ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .about-card:hover::before {
+        transform: scale(1.06);
+        filter: brightness(0.76) contrast(1.12);
+      }
+
+      .about-card-content {
+        position: absolute;
+        inset: auto 0 0;
+        padding: 1.5rem;
+      }
+
+      .about-card-index {
+        display: inline-block;
+        margin-bottom: 0.85rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      .about-card h2 {
+        margin: 0;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+      }
+
+      .about-card p {
+        margin: 0.9rem 0 0;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .about-card-image-1 {
+        --card-image: url("./fotky:videa/priestor_5.webp");
+      }
+
+      .about-card-image-2 {
+        --card-image: url("./fotky:videa/priestor_4.webp");
+      }
+
+      .about-card-image-3 {
+        --card-image: url("./fotky:videa/priestor_7.webp");
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-nav {
+          position: fixed;
+          left: 50%;
+          bottom: max(1rem, env(safe-area-inset-bottom));
+          z-index: 60;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          width: min(calc(100vw - 1.4rem), 24rem);
+          transform: translateX(-50%);
+          gap: 0.25rem;
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 999px;
+          background: linear-gradient(180deg, rgba(12, 12, 12, 0.84), rgba(0, 0, 0, 0.62));
+          padding: 0.38rem;
+          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.34);
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+        }
+
+        .mobile-nav a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 2.15rem;
+          border-radius: 999px;
+          font-family: "Archivo Expanded", sans-serif;
+          font-size: clamp(0.46rem, 1.75vw, 0.58rem);
+          font-weight: 800;
+          letter-spacing: 0.035em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.76);
+        }
+
+        .page-shell {
+          width: min(100% - 1.5rem, 80rem);
+          padding: 5.5rem 0 6.5rem;
+        }
+
+        .page-title {
+          font-size: clamp(2.5rem, 13vw, 4rem);
+        }
+
+        .intro-text {
+          margin-top: 1.1rem;
+          font-size: 0.95rem;
+          line-height: 1.7;
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+          margin-top: 2.2rem;
+          gap: 0.9rem;
+        }
+
+        .about-card {
+          min-height: clamp(16rem, 65vw, 22rem);
+          border-radius: 1.25rem;
+        }
+
+        .about-card-content {
+          padding: 1.15rem;
+        }
+
+        footer {
+          padding-bottom: 5.5rem;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .page-title {
+          font-size: clamp(2rem, 11vw, 3rem);
+        }
+
+        .about-card {
+          min-height: clamp(14rem, 60vw, 18rem);
+        }
+
+        .about-card h2 {
+          font-size: clamp(1.2rem, 5vw, 1.6rem);
+        }
+
+        .about-card p {
+          font-size: 0.85rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header>
+      <nav class="nav-links" aria-label="Hlavná navigácia">
+        <div class="nav-side">
+          <a href="./index.html#hero">Domov</a>
+          <a href="./produkty/signature-menu.html">Menu</a>
+        </div>
+        <a href="./index.html#hero" class="nav-links-logo" aria-label="More Than Smoke">
+          <img src="./fotky:videa/logo.png" alt="More Than Smoke" class="nav-center-logo" />
+        </a>
+        <div class="nav-side">
+          <a href="./onas.html">O nás</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Mobilná navigácia">
+      <a href="./index.html#hero">Domov</a>
+      <a href="./produkty/signature-menu.html">Menu</a>
+      <a href="./onas.html">O nás</a>
+      <a href="./kontakt.html">Kontakt</a>
+    </nav>
+
+    <main class="page-shell">
+      <section class="hero-copy">
+        <p class="kicker">O nás</p>
+        <h1 class="page-title">Priestor pre pomalý večer.</h1>
+        <p class="intro-text">
+          More Than Smoke je miesto pre hostí, ktorí nehľadajú hluk, ale atmosféru.
+          Spájame signature koktaily, prémiový alkohol a tlmený nočný servis do zážitku,
+          ktorý má vlastné tempo.
+        </p>
+      </section>
+
+      <section class="about-grid" aria-label="Atmosféra More Than Smoke">
+        <article class="about-card about-card-image-1">
+          <div class="about-card-content">
+            <span class="about-card-index">01</span>
+            <h2>Signature koktaily</h2>
+            <p>Precízna príprava, vyvážené chute a čistá prezentácia v pokojnom servise.</p>
+          </div>
+        </article>
+
+        <article class="about-card about-card-image-2">
+          <div class="about-card-content">
+            <span class="about-card-index">02</span>
+            <h2>Drinky</h2>
+            <p>Signature chute, čistá prezentácia a drinky, ktoré dopĺňajú večer.</p>
+          </div>
+        </article>
+
+        <article class="about-card about-card-image-3">
+          <div class="about-card-content">
+            <span class="about-card-index">03</span>
+            <h2>Atmosféra</h2>
+            <p>Tlmené svetlo, čierny detail a priestor, v ktorom čas prirodzene spomalí.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="relative z-10 px-5 pb-8 pt-2 md:px-8">
+      <div class="footer-bar mx-auto max-w-7xl">
+        <div class="footer-line" aria-hidden="true"></div>
+        <a href="./index.html#hero" class="footer-brand" aria-label="More Than Smoke">
+          <img
+            src="./fotky:videa/logo.png"
+            alt="More Than Smoke"
+            class="footer-brand-logo"
+          />
+        </a>
+        <p class="footer-copy">Nočný rituál v čiernej, bielej a zlatej.</p>
+        <div class="footer-socials" aria-label="Sociálne siete a kontakt">
+          <a
+            href="https://www.instagram.com/more.thansmoke/"
+            target="_blank"
+            rel="noreferrer"
+            class="footer-icon-link"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm10.35 1.65a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/mtscaffebar/?ref=NONE_xav_ig_profile_page_web#"
+            target="_blank"
+            rel="noreferrer"
+            class="footer-icon-link"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.4 21v-7.5h2.55l.38-2.95H13.4V8.67c0-.85.23-1.43 1.45-1.43h1.55V4.6c-.27-.04-1.18-.1-2.24-.1-2.21 0-3.72 1.35-3.72 3.83v2.17H8v2.95h2.44V21h2.96Z"/>
+            </svg>
+          </a>
+          <a
+            href="tel:0910818885"
+            class="footer-icon-link"
+            aria-label="Kontakt"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.56 0 1 .44 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5c.56 0 1 .44 1 1 0 1.24.2 2.45.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

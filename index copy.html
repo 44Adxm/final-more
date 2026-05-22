@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Than Smoke | Prémiový cocktail bar v Trnave</title>
+    <meta
+      name="description"
+      content="More Than Smoke je prémiový cocktail bar v Trnave. Temná elegancia, signature koktaily, prémiový alkohol a výnimočná nočná atmosféra."
+    />
+    <link rel="icon" type="image/png" href="./fotky:videa/logo.png" />
+    <link rel="apple-touch-icon" href="./fotky:videa/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              night: "#050505",
+              pearl: "#f5f5f5",
+              mist: "#b9b9b9",
+            },
+            fontFamily: {
+              serif: ["Archivo Expanded", "sans-serif"],
+              sans: ["Manrope", "sans-serif"],
+            },
+            letterSpacing: {
+              luxe: "0.28em",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="welcome-active bg-night text-pearl antialiased selection:bg-white selection:text-black">
+    <!-- Welcome overlay prekryje web pri načítaní a po dohraní videa sa odstráni -->
+    <div id="welcome-screen" aria-hidden="true">
+      <video
+        id="welcome-video"
+        class="welcome-video"
+        autoplay
+        muted
+        playsinline
+        webkit-playsinline="true"
+        preload="auto"
+        poster="./fotky:videa/logo.png"
+        disablepictureinpicture
+      >
+        <source src="./fotky:videa/welcome-video.mp4" type="video/mp4" />
+      </video>
+      <div class="welcome-overlay"></div>
+    </div>
+
+    <div class="noise fixed inset-0 pointer-events-none opacity-20 mix-blend-soft-light"></div>
+    <div class="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_20%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.05),transparent_28%)]"></div>
+
+    <div id="intro-logo" class="logo-flight" aria-hidden="true">
+      <img
+        src="./fotky:videa/logo.png"
+        alt=""
+        class="logo-flight-image"
+      />
+    </div>
+
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="header-frame mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+        <a
+          href="#hero"
+          class="nav-logo-shell rounded-full border border-white/10 bg-black/40 px-4 py-2 backdrop-blur-xl"
+        >
+          <img
+            src="./fotky:videa/logo.png"
+            alt="More Than Smoke"
+            class="nav-logo-target h-11 w-auto sm:h-12"
+          />
+        </a>
+
+        <nav id="main-nav" class="nav-links hidden items-center rounded-full border border-white/10 bg-black/30 px-6 py-3 text-[0.78rem] uppercase text-white/70 backdrop-blur-xl md:flex">
+          <div class="nav-side nav-side-left">
+            <a class="transition hover:text-white" href="#hero">Domov</a>
+            <a class="transition hover:text-white" href="./produkty/signature-menu.html">Menu</a>
+          </div>
+          <a href="#hero" class="nav-links-logo" aria-label="More Than Smoke">
+            <img
+              src="./fotky:videa/logo.png"
+              alt="More Than Smoke"
+              class="nav-center-logo"
+            />
+          </a>
+          <div class="nav-side nav-side-right">
+            <a class="transition hover:text-white" href="./onas.html">O nás</a>
+            <a class="transition hover:text-white" href="./kontakt.html">Kontakt</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <nav id="main-nav-mobile" class="site-mobile-nav md:hidden">
+      <a href="#hero">Domov</a>
+      <a href="./produkty/signature-menu.html">Menu</a>
+      <a href="./onas.html">O nás</a>
+      <a href="./kontakt.html">Kontakt</a>
+    </nav>
+
+    <main class="relative z-10">
+      <section id="hero" class="relative min-h-screen overflow-hidden">
+        <div class="hero-media absolute inset-0">
+          <video
+            id="hero-video"
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            preload="auto"
+            poster="./fotky:videa/logo.png"
+            disablepictureinpicture
+            aria-hidden="true"
+          >
+            <source src="./fotky:videa/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-video-overlay"></div>
+          <div class="hero-video-gradient"></div>
+        </div>
+
+        <div class="hero-smoke-glow absolute inset-0"></div>
+        <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black to-transparent"></div>
+
+        <div class="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-24">
+          <div class="hero-copy-block max-w-3xl">
+            <h1 class="font-serif text-[3.4rem] font-black uppercase leading-[0.88] tracking-[-0.04em] text-white sm:text-[4.8rem] md:text-[6.5rem] lg:text-[8rem]">
+              Stretneme sa tam, kde stúpa dym
+            </h1>
+          </div>
+
+          <div class="hero-actions mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#rezervacia"
+              class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white px-8 py-4 text-[0.72rem] font-semibold uppercase tracking-luxe text-black transition duration-500 hover:-translate-y-1 hover:bg-white/90"
+            >
+              Rezervovať stôl
+            </a>
+          </div>
+        </div>
+
+        <div class="watermark absolute right-4 top-1/2 hidden -translate-y-1/2 rotate-90 text-[0.55rem] uppercase tracking-[0.8em] text-white/10 md:block">
+          More Than Smoke
+        </div>
+      </section>
+
+      <section id="galeria" class="section-shell luxury-reveal-group">
+        <div class="section-head luxury-reveal-item">
+          <p class="section-kicker">Galéria</p>
+          <h2 class="section-title">Atmosféra v detailoch.</h2>
+        </div>
+
+        <div class="grid auto-rows-[17rem] gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="gallery-item luxury-reveal-item lg:col-span-2 lg:row-span-2">
+            <div class="gallery-media gallery-media-1"></div>
+            <div class="gallery-caption">
+              <h3>Signature cocktail</h3>
+              <p>Detail chutí, skla a materiálov v pokojnom, luxusnom kontraste.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item luxury-reveal-item">
+            <div class="gallery-media gallery-media-2"></div>
+            <div class="gallery-caption">
+              <h3>Brand moment</h3>
+              <p>Logo ako signatúra priestoru a nálady.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item luxury-reveal-item">
+            <div class="gallery-media gallery-media-3"></div>
+            <div class="gallery-caption">
+              <h3>Drink detail</h3>
+              <p>Studené sklo, výrazná textúra a čistá prezentácia.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item luxury-reveal-item lg:col-span-2">
+            <div class="gallery-media gallery-media-4"></div>
+            <div class="gallery-caption">
+              <h3>Nočný servis</h3>
+              <p>Atmosféra, ktorá nepôsobí hlasno, ale presvedčivo.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="rezervacia" class="section-shell luxury-reveal-group">
+        <div class="section-head luxury-reveal-item">
+          <p class="section-kicker">Rezervácia</p>
+          <h2 class="section-title">Rezervujte si svoj večer.</h2>
+        </div>
+
+        <div class="panel reservation-panel luxury-reveal-item grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div class="reservation-content">
+            <article class="opening-hours-card">
+              <div class="opening-hours-heading">
+                <span class="opening-hours-icon" aria-hidden="true">🕑</span>
+                <div>
+                  <p class="contact-label">Otváracia doba</p>
+                  <p class="opening-hours-note">Sme tu pre vás každý deň.</p>
+                </div>
+              </div>
+              <div class="opening-hours-list">
+                <div class="opening-hours-row">
+                  <span>Po-Št, Ne</span>
+                  <strong>15:00-23:00</strong>
+                </div>
+                <div class="opening-hours-row">
+                  <span>Pi-So</span>
+                  <strong>15:00-02:00</strong>
+                </div>
+              </div>
+            </article>
+
+            <div class="reservation-details grid gap-6 sm:grid-cols-2">
+              <div>
+                <p class="contact-label">Telefón</p>
+                <a href="tel:0910818885" class="contact-value">0910 818 885</a>
+              </div>
+              <div>
+                <p class="contact-label">Adresa</p>
+                <p class="contact-value">Hlavná 14/29, Trnava 91701</p>
+              </div>
+              <div>
+                <p class="contact-label">Typ priestoru</p>
+                <p class="contact-value">Prémiový cocktail bar</p>
+              </div>
+              <div>
+                <p class="contact-label">Instagram</p>
+                <p class="contact-value">@more.thansmoke</p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="tel:0910818885"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white px-8 py-4 text-[0.72rem] font-semibold uppercase tracking-luxe text-black transition duration-500 hover:-translate-y-1 hover:bg-white/90"
+          >
+            Zavolať a rezervovať
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="relative z-10 px-5 pb-8 pt-2 md:px-8">
+      <div class="footer-bar mx-auto max-w-7xl">
+        <div class="footer-line" aria-hidden="true"></div>
+        <a href="#hero" class="footer-brand" aria-label="More Than Smoke">
+          <img
+            src="./fotky:videa/logo.png"
+            alt="More Than Smoke"
+            class="footer-brand-logo"
+          />
+        </a>
+        <p class="footer-copy">Nočný rituál v čiernej, bielej a zlatej.</p>
+        <div class="footer-socials" aria-label="Sociálne siete a kontakt">
+          <a
+            href="https://www.instagram.com/more.thansmoke/"
+            target="_blank"
+            rel="noreferrer"
+            class="footer-icon-link"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm10.35 1.65a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/mtscaffebar/?ref=NONE_xav_ig_profile_page_web#"
+            target="_blank"
+            rel="noreferrer"
+            class="footer-icon-link"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.4 21v-7.5h2.55l.38-2.95H13.4V8.67c0-.85.23-1.43 1.45-1.43h1.55V4.6c-.27-.04-1.18-.1-2.24-.1-2.21 0-3.72 1.35-3.72 3.83v2.17H8v2.95h2.44V21h2.96Z"/>
+            </svg>
+          </a>
+          <a
+            href="tel:0910818885"
+            class="footer-icon-link"
+            aria-label="Kontakt"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.56 0 1 .44 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5c.56 0 1 .44 1 1 0 1.24.2 2.45.57 3.57.12.35.03.75-.24 1.02l-2.2 2.2Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
