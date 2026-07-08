@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Paso | Denné menu</title>
+  <meta name="description" content="Moderná stránka reštaurácie s aktuálnym týždenným menu.">
+  <link rel="preload" href="assets/el-paso-logo-cropped.webp" as="image">
+  <link rel="preload" href="assets/el-paso-emblem.webp" as="image">
+  <link rel="preload" href="assets/restaurant-hero.png" as="image">
+  <link rel="stylesheet" href="styles.css?v=21">
+</head>
+
+<body>
+  <!-- Mobile-only Top Logo -->
+  <header class="mobile-logo-header">
+    <a href="index.html" aria-label="El Paso domov">
+      <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="mobile-logo">
+    </a>
+  </header>
+
+  <!-- Desktop-only Header (Split Layout) -->
+  <header class="desktop-header" id="main-header">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Domov</a>
+      <a href="menu.html" class="nav-link">Menu</a>
+    </div>
+    <a class="header-brand" href="index.html" aria-label="El Paso domov">
+      <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="header-logo">
+    </a>
+    <div class="nav-right">
+      <a href="index.html#kontakt" class="nav-link">Kontakt</a>
+    </div>
+  </header>
+
+  <main class="menu-page-main">
+    <section class="section menu-section" id="menu" style="background: transparent;">
+      <div class="section-heading" data-reveal style="margin: 0 auto; text-align: center; justify-content: center;">
+        <p class="eyebrow">Týždenná ponuka</p>
+        <h1 id="week-label" style="font-size: clamp(2rem, 8vw, 3.5rem); margin: 0 auto; max-width: 100%; text-align: center;">Denné menu</h1>
+        <p id="menu-note">Menu sa načítava...</p>
+      </div>
+
+      <div class="menu-days-nav" id="menu-days-nav" data-reveal></div>
+
+      <div class="menu-list" id="menu-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-side">
+        <a href="#top" aria-label="El Paso domov" class="footer-logo-link">
+          <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="footer-logo">
+        </a>
+        <p class="footer-tagline">Trochu iná hospoda, kde chutí dobre.</p>
+      </div>
+      
+      <div class="footer-links-side">
+        <div class="footer-nav-col">
+          <strong>Navigácia</strong>
+          <a href="index.html">Domov</a>
+          <a href="menu.html">Denné menu</a>
+          <a href="index.html#kontakt">Rezervácie</a>
+        </div>
+        <div class="footer-nav-col">
+          <strong>Sledujte nás</strong>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 El Paso. Všetky práva vyhradené.</span>
+      <a href="#top" class="back-to-top">Hore ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js?v=19" type="module"></script>
+</body>
+
+</html>

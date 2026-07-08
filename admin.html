@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Správa menu | El Paso</title>
+    <link rel="stylesheet" href="/styles.css?v=7">
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="admin-panel" id="login-panel">
+        <div class="admin-intro">
+          <p class="eyebrow">Správa ponuky</p>
+          <h1>Týždenné menu</h1>
+          <p>Prihlás sa a uprav jedlá, ktoré sa zobrazia v týždennej ponuke.</p>
+        </div>
+        <form class="login-form" id="login-form">
+          <label>
+            Heslo
+            <input name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <button class="button primary" type="submit">Prihlásiť sa</button>
+          <p class="form-message" id="login-message"></p>
+        </form>
+      </section>
+
+      <section class="admin-panel is-hidden" id="editor-panel">
+        <div class="admin-toolbar">
+          <div>
+            <p class="eyebrow">Editor</p>
+            <h1>Upraviť menu</h1>
+          </div>
+          <div class="toolbar-actions">
+            <a class="button ghost dark" href="/">Stránka</a>
+            <button class="button ghost dark" id="add-day" type="button">Pridať deň</button>
+            <button class="button primary" form="menu-form" type="submit">Uložiť</button>
+          </div>
+        </div>
+
+        <form id="menu-form" class="menu-form">
+          <div class="form-row two">
+            <label>
+              Nadpis týždňa
+              <input name="weekLabel" type="text" maxlength="80" required>
+            </label>
+            <label>
+              Poznámka
+              <input name="note" type="text" maxlength="180">
+            </label>
+          </div>
+          <div id="days-editor" class="days-editor"></div>
+          <p class="form-message" id="save-message"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/admin.js?v=7" type="module"></script>
+  </body>
+</html>

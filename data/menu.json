@@ -1,0 +1,51 @@
+{
+  "weekLabel": "Menu na tento týždeň",
+  "note": "Denné menu podávame od 11:00 do vypredania. Objednávky a rezervácie vybavíme telefonicky.",
+  "days": [
+    {
+      "day": "Pondelok",
+      "date": "06.07.",
+      "soup": "Paradajková polievka s bazalkou",
+      "main": "Kurací steak na bylinkovom masle, ryža, šalát",
+      "alt": "Penne s pečenou zeleninou a parmezánom",
+      "dessert": "Domáci koláč podľa ponuky",
+      "price": "7,90 EUR"
+    },
+    {
+      "day": "Utorok",
+      "date": "07.07.",
+      "soup": "Vývar s rezancami a zeleninou",
+      "main": "Bravčové soté na šampiňónoch, tarhoňa",
+      "alt": "Grilovaný syr, hranolky, tatárska omáčka",
+      "dessert": "Jogurtový pohár s ovocím",
+      "price": "7,90 EUR"
+    },
+    {
+      "day": "Streda",
+      "date": "08.07.",
+      "soup": "Cesnaková krémová polievka s krutónmi",
+      "main": "Hovädzí perkelt, domáce halušky",
+      "alt": "Zeleninové rizoto s rukolou",
+      "dessert": "Palacinka s džemom",
+      "price": "8,20 EUR"
+    },
+    {
+      "day": "Štvrtok",
+      "date": "09.07.",
+      "soup": "Fazuľová polievka s údeným mäsom",
+      "main": "Vyprážaný kurací rezeň, zemiaková kaša, uhorkový šalát",
+      "alt": "Cestoviny so špenátom a nivou",
+      "dessert": "Makový závin",
+      "price": "7,90 EUR"
+    },
+    {
+      "day": "Piatok",
+      "date": "10.07.",
+      "soup": "Zeleninový krém",
+      "main": "Pečený losos, maslové zemiaky, citrónová omáčka",
+      "alt": "Tortilla s kuracím mäsom a zeleninou",
+      "dessert": "Čokoládový mousse",
+      "price": "8,90 EUR"
+    }
+  ]
+}

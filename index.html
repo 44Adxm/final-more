@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="sk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El Paso | Denné menu</title>
+  <meta name="description" content="Moderná stránka reštaurácie s aktuálnym týždenným menu.">
+  <link rel="preload" href="assets/el-paso-logo-cropped.webp" as="image">
+  <link rel="preload" href="assets/el-paso-emblem.webp" as="image">
+  <link rel="preload" href="assets/restaurant-hero.png" as="image">
+  <link rel="stylesheet" href="styles.css?v=20">
+</head>
+
+<body>
+  <!-- Mobile-only Top Logo -->
+  <header class="mobile-logo-header">
+    <a href="#top" aria-label="El Paso domov">
+      <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="mobile-logo">
+    </a>
+  </header>
+
+  <!-- Desktop-only Header (Split Layout) -->
+  <header class="desktop-header" id="main-header">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Domov</a>
+      <a href="menu.html" class="nav-link">Menu</a>
+    </div>
+    <a class="header-brand" href="#top" aria-label="El Paso domov">
+      <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="header-logo">
+    </a>
+    <div class="nav-right">
+      <a href="#kontakt" class="nav-link">Kontakt</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1><span>Trochu</span> <span>iná</span> <span>hospoda,</span> <span class="hero-tagline">kde chutí dobre.</span></h1>
+        <p class="hero-kicker">Reštaurácia • pizzeria • pohoda</p>
+        <div class="hero-actions">
+          <a class="button primary" href="menu.html">Pozrieť menu</a>
+          <a class="button ghost" href="#kontakt">Kontakt</a>
+        </div>
+        <div class="hero-info-strip">
+          <div>
+            <span>Otvorené dnes</span>
+            <strong id="hero-today-hours">10:00 - 22:00</strong>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section menu-promo-section" id="menu">
+      <div class="menu-promo-container" data-reveal>
+        <div class="menu-promo-content">
+          <p class="eyebrow">Denná ponuka</p>
+          <h2>Pozrite si naše denné menu</h2>
+          <p>Každý deň pre vás pripravujeme čerstvé obedy, poctivé polievky a lahodné alternatívy. Všetko z čerstvých surovín.</p>
+          <a href="menu.html" class="button primary" style="width: fit-content; min-width: 200px; margin-top: 8px;">Zobraziť týždenné menu</a>
+        </div>
+        <div class="menu-promo-image" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section featured-section" id="odporucame">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Odporúčame</p>
+        <h2>Jedlá, ktoré miznú zo stolov najrýchlejšie.</h2>
+      </div>
+      <div class="featured-grid">
+        <article data-reveal>
+          <div class="featured-photo pizza"></div>
+          <span>Domáca klasika</span>
+          <strong>Chrumkavá pizza z pece</strong>
+          <p>Veľa syra, dobré cesto a vôňa, ktorá patrí k večeru v El Paso.</p>
+        </article>
+        <article data-reveal>
+          <div class="featured-photo lunch"></div>
+          <span>Obedová voľba</span>
+          <strong>Poctivé teplé jedlo</strong>
+          <p>Porcia, ktorá zasýti, bez zbytočného pozlátka a s chuťou domácej kuchyne.</p>
+        </article>
+        <article data-reveal>
+          <div class="featured-photo grill"></div>
+          <span>Na večer</span>
+          <strong>Niečo k posedeniu</strong>
+          <p>Jedlo na stôl, dobrý drink a atmosféra, pri ktorej sa neponáhľa.</p>
+        </article>
+      </div>
+    </section>
+
+
+
+    <section class="section contact-section" id="kontakt">
+      <div data-reveal>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Rezervácie a objednávky</h2>
+      </div>
+      <div class="contact-grid">
+        <a data-reveal href="tel:+421911233431">
+          <span>Telefón</span>
+          <strong>0911 233 431</strong>
+        </a>
+        <a data-reveal href="mailto:info@elpaso.local">
+          <span>Email</span>
+          <strong>info@elpaso.local</strong>
+        </a>
+        <div data-reveal>
+          <span>Adresa</span>
+          <strong>Doplniť podľa prevádzky</strong>
+        </div>
+        <div data-reveal class="opening-hours-card">
+          <span>Otváracie hodiny</span>
+          <ul class="opening-hours-list">
+            <li><span>Po - Št</span> <strong>10:00 - 22:00</strong></li>
+            <li><span>Pia</span> <strong>10:00 - 00:00</strong></li>
+            <li><span>So</span> <strong>11:00 - 00:00</strong></li>
+            <li><span>Ne</span> <strong>11:00 - 20:00</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-side">
+        <a href="#top" aria-label="El Paso domov" class="footer-logo-link">
+          <img src="assets/el-paso-logo-cropped.webp" alt="El Paso Logo" class="footer-logo">
+        </a>
+        <p class="footer-tagline">Trochu iná hospoda, kde chutí dobre.</p>
+      </div>
+      
+      <div class="footer-links-side">
+        <div class="footer-nav-col">
+          <strong>Navigácia</strong>
+          <a href="index.html">Domov</a>
+          <a href="menu.html">Denné menu</a>
+          <a href="#kontakt">Rezervácie</a>
+        </div>
+        <div class="footer-nav-col">
+          <strong>Sledujte nás</strong>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 El Paso. Všetky práva vyhradené.</span>
+      <a href="#top" class="back-to-top">Hore ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js?v=19" type="module"></script>
+</body>
+
+</html>
