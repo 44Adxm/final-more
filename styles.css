@@ -88,16 +88,8 @@ textarea {
   display: none;
 }
 
-.desktop-header .nav-left {
-  display: contents; /* Allows children (Domov, Menu) to space out evenly as flex items */
-}
-
-.nav-left {
-  justify-self: start;
-}
-
-.nav-right {
-  justify-self: end;
+.desktop-header .nav-links {
+  display: contents; /* Allows children (Domov, Menu, Kontakt) to space out evenly as flex items */
 }
 
 .header-brand {
@@ -1335,32 +1327,35 @@ textarea:focus {
 
 @media (min-width: 720px) {
   .desktop-header {
-    display: grid; /* Show desktop split-header on wider screens */
-    position: fixed;
-    top: 44px;
-    bottom: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    width: min(600px, calc(100% - 36px));
-    height: 60px;
-    padding: 0 24px;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex; /* Show desktop header as flex on wider screens */
+    justify-content: space-between;
     align-items: center;
-    background: linear-gradient(145deg, rgba(20, 15, 13, 0.88), rgba(39, 25, 22, 0.76));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 224, 163, 0.22);
-    border-radius: 999px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    z-index: 100;
+    width: 100%;
+    height: 85px;
+    padding: 0 max(24px, calc((100vw - 1120px) / 2));
+    background: rgba(20, 15, 13, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    border-bottom: 1px solid rgba(255, 224, 163, 0.08);
+    border-radius: 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
   }
 
   .desktop-header .header-brand {
     display: block;
   }
 
-  .desktop-header .nav-left {
-    display: block; /* Reset back to standard display block/flex on desktop */
+  .desktop-header .nav-links {
+    display: flex; /* Reset from display: contents on mobile */
+    align-items: center;
+    gap: 16px; /* Spacious spacing between nav links */
   }
 
   .mobile-logo-header,
@@ -1394,11 +1389,13 @@ textarea:focus {
   }
 
   .header-brand {
-    width: 130px; /* Wider slot to match the larger desktop logo */
+    width: 65px; /* Wider slot to match the larger desktop logo */
   }
 
   .header-logo {
-    height: 130px; /* Big protruding logo */
+    height: 70px; /* Fits completely inside the 85px high header */
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .nav-link {
